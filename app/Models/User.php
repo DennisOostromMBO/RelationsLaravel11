@@ -43,4 +43,8 @@ class User extends Authenticatable
        return $this->hasOne(experience::class);
     }
 
+    public function posts()
+    {
+       return $this->HasMany(Post::class, 'user_id');
+    }
 }
